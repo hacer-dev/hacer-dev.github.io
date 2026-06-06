@@ -1,7 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Apps</title></head>
-  <body>
-    <h1>various apps</h1>
-  </body>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hacer-dev — 작고 쓸모있는 도구</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">hacer-dev<small>studio</small></a>
+    <nav class="header-nav">
+      <a href="/" class="active">Apps</a>
+      <a href="/request/">Request</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>hacer-dev</h1>
+  <p>작고 쓸모있는 데스크탑 유틸리티를 만듭니다.<br>필요한 앱이 있으면 의뢰해주세요.</p>
+</section>
+
+<div class="search-wrap">
+  <input type="text" class="search-input" id="searchInput" placeholder="앱 검색... (이름, 태그)">
+</div>
+
+<div class="app-grid" id="appGrid"></div>
+
+<div class="empty-state" id="emptyState" style="display:none">
+  <div class="icon">🔍</div>
+  <p>검색 결과가 없습니다.</p>
+</div>
+
+<footer class="footer">
+  <p>hacer-dev &middot; hand-made desktop utilities</p>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
 </html>

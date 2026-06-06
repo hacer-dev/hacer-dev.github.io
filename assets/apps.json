@@ -1,0 +1,25 @@
+[
+  {
+    "id": "tocap2-wails",
+    "name": "toCap²",
+    "desc": "파일명 대문자 변환기 — Wails 네이티브 앱",
+    "tags": ["파일관리", "변환", "네이티브"],
+    "icon": "Aa",
+    "tech": ["Go", "Wails", "WebKit2GTK"],
+    "version": "1.0.0",
+    "updated": "2026-06-06",
+    "platforms": ["windows", "linux"],
+    "features": [
+      "폴더 선택 및 드래그드롭 지원",
+      "패턴 필터 (*.txt, *.mp4 등)",
+      "하위폴더 포함 전체 탐색",
+      "개별 선택 / 전체 선택 / 패턴 일괄 선택",
+      "되돌리기 가능 (변환 취소)",
+      "Wails 네이티브 창 (WebKit 기반)"
+    ],
+    "downloads": {
+      "windows": "downloads/tocap2-wails_v1.0.0.exe",
+      "linux": "downloads/tocap2-wails_v1.0.0_linux"
+    }
+  }
+]
