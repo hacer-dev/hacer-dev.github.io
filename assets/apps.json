@@ -1,32 +1,25 @@
 [
   {
     "id": "tocap2-wails",
-    "name": "toCap²",
-    "desc": "파일명 대문자 변환기 — Wails 네이티브 앱",
-    "tags": ["파일관리", "변환", "네이티브"],
+    "name": { "ko": "toCap\u00b2", "en": "toCap\u00b2" },
+    "desc": { "ko": "\ud30c\uc77c\uba85 \ub300\ubb38\uc790 \ubcc0\ud658\uae30 \u00b7 Wails", "en": "Filename Uppercase Converter \u00b7 Wails" },
+    "tags": { "ko": ["\ud30c\uc77c\uad00\ub9ac", "\ubcc0\ud658", "\ub124\uc774\ud2f0\ube0c"], "en": ["file", "converter", "native"] },
     "icon": "Aa",
     "tech": ["Go", "Wails", "WebKit2GTK"],
     "version": "1.0.0",
     "updated": "2026-06-06",
     "platforms": ["windows", "linux"],
-    "features": [
-      "폴더 선택 및 드래그드롭 지원",
-      "패턴 필터 (*.txt, *.mp4 등)",
-      "하위폴더 포함 전체 탐색",
-      "개별 선택 / 전체 선택 / 패턴 일괄 선택",
-      "되돌리기 가능 (변환 취소)",
-      "Wails 네이티브 창 (WebKit 기반)"
-    ],
-    "usage": [
-      "실행하면 현재 폴더의 파일 목록이 표시됩니다",
-      "필터에 *.txt를 입력하고 [선택]을 누르면 .txt 파일만 선택됩니다",
-      "변환할 글자 수를 슬라이더로 조절합니다",
-      "[시작]을 누르면 파일명이 변경됩니다",
-      "[되돌리기]로 원복하거나 [완료]로 확정합니다"
-    ],
+    "features": {
+      "ko": ["\ud3f4\ub354 \uc120\ud0dd \ubc0f \ub4dc\ub798\uadf8\ub4dc\ub86d", "\ud328\ud134 \ud544\ud130 (*.txt, *.mp4)", "\ud558\uc704\ud3f4\ub354 \ud3ec\ud568", "\uac1c\ubcc4/\uc804\uccb4/\ud328\ud134 \uc120\ud0dd", "\ub418\ub3cc\ub9ac\uae30 \uac00\ub2a5", "Wails \ub124\uc774\ud2f0\ube0c \ucc3d"],
+      "en": ["Drag & drop folder support", "Pattern filter (*.txt, *.mp4)", "Recursive subfolder scan", "Individual/All/Pattern selection", "Reversible rename", "Wails native window"]
+    },
+    "usage": {
+      "ko": ["\uc2e4\ud589\ud558\uba74 \ud604\uc7ac \ud3f4\ub354 \ud30c\uc77c\uc774 \ubcf4\uc784", "\ud544\ud130\uc5d0 *.txt \uc785\ub825 \u2192 [\uc120\ud0dd]", "\uc2ac\ub77c\uc774\ub354\ub85c \ubcc0\ud658 \uae00\uc218 \uc870\uc808", "[\uc2dc\uc791] \u2192 \ud30c\uc77c\uba85 \ubcc0\uacbd", "[\ub418\ub3cc\ub9ac\uae30] \uc6d0\ubcf5 / [\uc644\ub8cc] \ud655\uc815"],
+      "en": ["Launch to see files in current folder", "Type *.txt \u2192 Click Select", "Adjust char count with slider", "Click Start to rename", "Revert to undo / Confirm to finalize"]
+    },
     "downloads": {
-      "windows": "downloads/tocap2-wails_v1.0.0.exe",
-      "linux": "downloads/tocap2-wails_v1.0.0_linux"
+      "windows": "downloads/tocap2-wails.exe",
+      "linux": "downloads/tocap2-wails"
     }
   }
 ]

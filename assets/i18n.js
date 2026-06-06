@@ -142,3 +142,17 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark ? 'light' : 'dark');
   applyTheme();
 }
+
+// ── Language toggle ──
+function toggleLang() {
+  const current = getLang();
+  const next = current === 'ko' ? 'en' : 'ko';
+  localStorage.setItem('lang', next);
+  location.reload();
+}
+
+// Update lang button text on load
+document.addEventListener("DOMContentLoaded", function() {
+  const btn = document.getElementById('langBtn');
+  if (btn) btn.textContent = getLang() === 'ko' ? 'EN' : 'KR';
+});
