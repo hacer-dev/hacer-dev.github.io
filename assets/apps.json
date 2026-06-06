@@ -17,6 +17,13 @@
       "되돌리기 가능 (변환 취소)",
       "Wails 네이티브 창 (WebKit 기반)"
     ],
+    "usage": [
+      "실행하면 현재 폴더의 파일 목록이 표시됩니다",
+      "필터에 *.txt를 입력하고 [선택]을 누르면 .txt 파일만 선택됩니다",
+      "변환할 글자 수를 슬라이더로 조절합니다",
+      "[시작]을 누르면 파일명이 변경됩니다",
+      "[되돌리기]로 원복하거나 [완료]로 확정합니다"
+    ],
     "downloads": {
       "windows": "downloads/tocap2-wails_v1.0.0.exe",
       "linux": "downloads/tocap2-wails_v1.0.0_linux"

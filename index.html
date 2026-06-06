@@ -3,42 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>hacer-dev — 작고 쓸모있는 도구</title>
+<title>hacerio — 작고 쓸모있는 도구</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="header-logo">hacer-dev<small>studio</small></a>
+    <a href="/" class="header-logo">hacerio</a>
     <nav class="header-nav">
-      <a href="/" class="active">Apps</a>
-      <a href="/request/">Request</a>
-      <a href="/about/">About</a>
+      <a href="/" class="active" data-i18n="navApps">Apps</a>
+      <a href="/request/" data-i18n="navRequest">Request</a>
+      <a href="/about/" data-i18n="navAbout">About</a>
+          <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="테마 변경">🌙</button>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <h1>hacer-dev</h1>
-  <p>작고 쓸모있는 데스크탑 유틸리티를 만듭니다.<br>필요한 앱이 있으면 의뢰해주세요.</p>
+  <h1>hacerio</h1>
+  <p data-i18n="heroDesc">작고 쓸모있는 앱을 만듭니다.<br>필요한 앱이 있으면 의뢰해주세요.</p>
 </section>
 
-<div class="search-wrap">
-  <input type="text" class="search-input" id="searchInput" placeholder="앱 검색... (이름, 태그)">
+<div class="search-wrap" id="searchWrap">
+  <input type="text" class="search-input" id="searchInput" data-i18n="searchPlaceholder" placeholder="앱 검색... (이름, 태그)">
 </div>
 
 <div class="app-grid" id="appGrid"></div>
 
+<div id="detailView" style="display:none;max-width:800px;margin:0 auto;padding:0 1.5rem 3rem"></div>
+
 <div class="empty-state" id="emptyState" style="display:none">
   <div class="icon">🔍</div>
-  <p>검색 결과가 없습니다.</p>
+  <p data-i18n="emptyResults">검색 결과가 없습니다.</p>
 </div>
 
 <footer class="footer">
-  <p>hacer-dev &middot; hand-made desktop utilities</p>
+  <p>hacerio &middot; hand-made desktop utilities</p>
 </footer>
 
 <script src="assets/script.js"></script>
-</body>
+<script src="assets/i18n.js"></script>
+<script>document.addEventListener("DOMContentLoaded", applyI18n);
+var t=localStorage.getItem("theme")||"light";if(t==="dark"){document.documentElement.setAttribute("data-theme","dark");document.getElementById("themeBtn").textContent="☀️"}function toggleTheme(){var e=document.documentElement,n=e.getAttribute("data-theme")==="dark";n?(e.removeAttribute("data-theme"),localStorage.setItem("theme","light"),document.getElementById("themeBtn").textContent="🌙"):(e.setAttribute("data-theme","dark"),localStorage.setItem("theme","dark"),document.getElementById("themeBtn").textContent="☀️")}</script></body>
 </html>

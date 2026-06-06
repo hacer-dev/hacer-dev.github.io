@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — hacer-dev</title>
+<title>About — hacerio</title>
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <style>
@@ -19,55 +19,54 @@
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="header-logo">hacer-dev<small>studio</small></a>
+    <a href="/" class="header-logo">hacerio</a>
     <nav class="header-nav">
       <a href="/">Apps</a>
       <a href="/request/">Request</a>
       <a href="/about/" class="active">About</a>
+          <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="테마 변경">🌙</button>
     </nav>
   </div>
 </header>
 
 <main class="about-wrap">
 
-  <h1>hacer-dev studio</h1>
-  <p>
+  <h1 data-i18n="aboutTitle">hacerio studio</h1>
+  <p data-i18n="aboutDesc">
     hacer는 스페인어로 "만들다"라는 뜻입니다.  
     필요한 도구는 직접 만들어서 쓰자는 마음으로 시작했고,
     그 결과물이 누군가에게도 도움이 되길 바라며 공개합니다.
   </p>
 
   <div class="about-section">
-    <h2>🛠 하는 일</h2>
+    <h2 data-i18n="aboutWorkTitle">🛠 하는 일</h2>
     <ul>
-      <li>데스크탑 유틸리티 개발</li>
-      <li>기존 앱 기능 수정/개선</li>
-      <li>새로운 아이디어 프로토타이핑</li>
+      <li data-i18n-list="aboutWorkList">앱(프로그램) 개발</li>
     </ul>
   </div>
 
   <div class="about-section">
-    <h2>⚙ 기술 스택</h2>
+    <h2 data-i18n="aboutStackTitle">⚙ 기술 스택</h2>
     <ul>
-      <li><strong>언어:</strong> Go, C++, JavaScript</li>
-      <li><strong>GUI:</strong> Wails (Go + WebKit), ImGui, HTML/CSS/JS</li>
-      <li><strong>배포:</strong> Linux, Windows</li>
+      <li data-i18n-list="aboutStackList">Go, Wails, 웹 개발 (HTML/CSS/JS)</li>
     </ul>
   </div>
 
   <div class="about-section">
-    <h2>📬 연락</h2>
+    <h2 data-i18n="aboutContactTitle">📬 연락</h2>
     <p>
-      GitHub Issues: <a href="https://github.com/hacer-dev/hacer-dev.github.io/issues" target="_blank">hacer-dev/hacer-dev.github.io</a><br>
-      Email: hacer.dev@email.com
+      GitHub Issues: <a href="https://github.com/hacerio/hacerio.github.io/issues" target="_blank">hacerio/hacerio.github.io</a><br>
+      Email: official.by.acer@gmail.com
     </p>
   </div>
 
 </main>
 
 <footer class="footer">
-  <p>hacer-dev &middot; hand-made desktop utilities</p>
+  <p data-i18n="footer">hacerio · hand-made apps</p>
 </footer>
 
+<script>var t=localStorage.getItem("theme")||"light";if(t==="dark"){document.documentElement.setAttribute("data-theme","dark");document.getElementById("themeBtn").textContent="☀️"}function toggleTheme(){var e=document.documentElement,n=e.getAttribute("data-theme")==="dark";n?(e.removeAttribute("data-theme"),localStorage.setItem("theme","light"),document.getElementById("themeBtn").textContent="🌙"):(e.setAttribute("data-theme","dark"),localStorage.setItem("theme","dark"),document.getElementById("themeBtn").textContent="☀️")}</script><script src="assets/i18n.js"></script>
+<script>document.addEventListener("DOMContentLoaded", applyI18n);</script>
 </body>
 </html>
